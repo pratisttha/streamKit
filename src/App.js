@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Header from "./components/Header";
+import Section from "./components/Section";
+import Sidebar from "./components/Sidebar";
+import Form from "./components/Form";
+import Modal from "./components/Modal";
 
 function App() {
+  const nav_list = [
+    { link: "/home", title: "Home" },
+    { link: "/contact-us", title: "Contact Us" },
+    { link: "/about", title: "About Us" },
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=''>
+      {/* <Modal /> */}
+      <Header title={"Stream Kit"} nav_list={nav_list} />
+      <Section />
+      {/* <Form /> */}
+      <Sidebar />
+
+
+
     </div>
   );
 }
